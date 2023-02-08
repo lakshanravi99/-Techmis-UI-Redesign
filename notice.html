@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TECMIS-FOT</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="assets/vendors/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.theme.default.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="logo.png" />
+  </head>
+  <style type="text/css">
+    .xx,.xb{
+background-color:rgba(0, 0, 0, 0.7);
+width:100%;
+height:100%;
+position:absolute;top:0;
+display:none;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+.popup-content{
+height:500px;
+width:500px;
+background:#a1c2f7;
+padding:20px;
+border-radius:10%;
+position:relative;
+  </style>
+  <body>
+    <div class="container-scroller">
+
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+          <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo3.jpg" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/" alt="logo" /></a>
+        </div>
+        <ul class="nav">
+          <li class="nav-item profile">
+            <div class="profile-desc">
+              <div class="profile-pic">
+                <div class="count-indicator">
+                  <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
+                  <span class="count bg-success"></span>
+                </div>
+                <div class="profile-name">
+                  <h5 class="mb-0 font-weight-normal">Lakshan Ravindu</h5>
+                  <span>ICT_Student</span>
+                </div>
+              </div>
+              <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+              <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-settings text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small">Account settings</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-onepassword  text-info"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small">Change Password</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                   
+                  </div>
+                 
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item nav-category">
+            <span class="nav-link">Navigation</span>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="index.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-speedometer"></i>
+              </span>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <span class="menu-icon">
+                <i class="mdi mdi-laptop"></i>
+              </span>
+              <span class="menu-title">Registration</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Course Registration </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Exam Registration</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html"></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="pages/forms/basic_elements.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-playlist-play"></i>
+              </span>
+              <span class="menu-title">Notices</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="pages/tables/basic-table.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-table-large"></i>
+              </span>
+              <span class="menu-title">Courses</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="pages/charts/chartjs.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-chart-bar"></i>
+              </span>
+              <span class="menu-title">Medical</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="pages/icons/mdi.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-contacts"></i>
+              </span>
+              <span class="menu-title">Past Papers</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <span class="menu-icon">
+                <i class="mdi mdi-security"></i>
+              </span>
+              <span class="menu-title">Order Meal</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-file-document-box"></i>
+              </span>
+              <span class="menu-title">Attendence</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+
+
+
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar p-0 fixed-top d-flex flex-row">
+          <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+          </div>
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+              <span class="mdi mdi-menu"></span>
+            </button>
+            <ul class="navbar-nav w-100">
+              <li class="nav-item w-100">
+                <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search text-white">     
+                  <input type="text" class="form-control " placeholder="Search ">  
+                </form>
+              </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-right">
+             
+              <li class="nav-item nav-settings d-none d-lg-block">
+                <a class="nav-link" href="#">
+                
+              <li class="nav-item dropdown border-left">
+                <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+                  <i class="mdi mdi-bell"></i>
+                  <span class="count bg-danger"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                  <h6 class="p-3 mb-0">Notifications</h6>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-calendar text-success"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Event today</p>
+                      <p class="text-muted ellipsis mb-0"> Just a reminder that you have an event today </p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-settings text-danger"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Settings</p>
+                      <p class="text-muted ellipsis mb-0"> Update dashboard </p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-link-variant text-warning"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Launch Admin</p>
+                      <p class="text-muted ellipsis mb-0"> New admin wow! </p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <p class="p-3 mb-0 text-center">See all notifications</p>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                  <div class="navbar-profile">
+                    <img class="img-xs rounded-circle" src="assets/images/faces/face15.jpg" alt="">
+                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Lakshan Ravindu</p>
+                    <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                  </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
+                  <h6 class="p-3 mb-0">Profile</h6>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-settings text-success"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Settings</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-logout text-danger"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Log out</p>
+                    </div>
+                  </a>
+                 
+              </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="mdi mdi-format-line-spacing"></span>
+            </button>
+          </div>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+  
+                <div class="col-lg-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Notice</h4> <b style ="color: darkred;"><div class="table-responsive">
+                        <table class="table table-dark">
+                          <thead>
+                            <tr>
+                              <th>No</th>
+                      <th>Date/Time</th>
+                      <th>Title</th>
+                      <th>Download Link</th>
+                            </tr>
+                          </thead>
+                          <tbody class="table-border-bottom-0">
+                      <tr>
+  
+                        <div  class="xb" >
+                        <div class="popup-content" >
+                                                         
+                       <label for="exampleFormControlFile1">Notice  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+  </svg></i></label>
+  66
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+    <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/>66
+  </svg>
+      
+  
+  
+              <script type="text/javascript">
+                  int clicks = 0;
+                  function click() {
+                      clicks += 1;
+                      document.getElementById("clicks").innerHTML = clicks;
+                  };
+              </script>
+                       <br>
+                       
+                      
+                      <div class="form-group">
+                        <p >
+                      Dear Students,<br>
+  
+                          Level 1,2 and 3, semester I examination registration extended <br>until 20.05.2022. If you couldn't register, please register before <br>this deadline. <br>
+  
+                           
+  <br>
+                          Assistant Registrar<br>
+  <br>
+                          Faculty of Technology
+  <br>
+                          17/05/2022
+                          </p>
+                        <input type="button"  class="btn btn-danger" id="closeformxb" value="Close" style="float:left;">
+  
+    
+  
+                        
+                      </form>
+                        
+                      </div>
+                                                                </div>
+                                                                
+                                                              </div>                                  
+                          </div> 
+                                           
+  
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>01</strong></td>
+                        <td>2022-05-01/15:54</td>
+                        <td > <p onmouseover="mouseoverevent()" class="blink">EXAMINATION REGISTRATION-LEVEL 4 SEMESTER I </span>
+                          <!-- blinking function -->
+                          <script>
+                                function startBlink(){
+                                  window.blinker = setInterval(function(){
+                                      if(window.blink){
+                                         $('.blink').css('color','blue');
+                                         window.blink=false;
+                                       }
+                                      else{
+                                          $('.blink').css('color','white');
+                                          window.blink = true;
+                                      }
+                                  },500);
+                                }
+                                function stopBlink(){
+                                if(window.blinker) clearInterval(window.blinker);
+    } 
+                              </script>
+   </p> </td>
+                        <td><span class="badge bg-label-success me-1">Download</span></td>               
+                      </tr>
+  
+  
+                      <script language="Javascript" type="text/Javascript">
+                        <!--
+                        function mouseoverevent()
+                        {
+                           //alert("This is JavaTpoint");
+                          document.querySelector(".content-wrapper").style.display = "none";
+                          //document.querySelector(".xb").style.display = "flex";
+                        }
+                        //-->
+                      </script>
+  
+                      <script language="Javascript" type="text/Javascript">
+                        <!--
+                        function mouseoverevent()
+                        {
+                           //alert("This is JavaTpoint");
+                          //document.querySelector(".content-wrapper").style.display = "none";
+                          document.querySelector(".xb").style.display = "flex";
+                        }
+                        //-->
+                      </script>
+  
+                      
+  
+                       <script>
+                              document.getElementById("closeformxb").addEventListener("click",
+                              function(){
+                              document.querySelector(".content-wrapper").style.display = "";
+                              document.querySelector(".xb").style.display = "none";
+                              // when user seen after stop blink
+                             if(window.blinker) clearInterval(window.blinker);
+  
+  
+                              });
+                        
+                     </script>            
+                      <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>02</strong></td>
+                        <td>2022-04-29/11:57</td>
+                        <td> BUSINESS ECONOMICS (TCS2112) - ASSIGNMENT 02 </td>
+                        <td><span class="badge bg-label-success me-1">Download</span></td>               
+                      </tr>
+  
+                      <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>03</strong></td>
+                        <td>2022-04-29/11:55</td>
+                        <td> HUMAN RESOURCE MANAGEMENT ( TCS3131 ) - CONTINUOUS ASSESSMENT 1- FOR ICT LEVEL 3 STUDENTS</td>
+                        <td><span class="badge bg-label-success me-1">Download</span></td>               
+                      </tr>
+  
+                      <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>04</strong></td>
+                        <td>2022-04-29/11:45</td>
+                        <td> CREATIVITY, INNOVATION AND ENTREPRENEURSHIP ( TCS4112) - MID EXAM </td>
+                        <td><span class="badge bg-label-success me-1">Download</span></td>               
+                      </tr>
+  
+                      <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>05</strong></td>
+                        <td>2022-04-29/11:44</td>
+                        <td> HUMAN RESOURCE MANAGEMENT ( TCS4121 )- MID EXAM </td>
+                        <td><span class="badge bg-label-success me-1">Download</span></td>               
+                      </tr>
+  
+                      <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>06</strong></td>
+                        <td>2022-04-29/11:37</td>
+                        <td> SAFETY AND RISK MANAGEMENT ( TCS3111 ) - ONLINE QUIZ 2 </td>
+                        <td><span class="badge bg-label-success me-1">Download</span></td>               
+                      </tr>
+  
+                      <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>07</strong></td>
+                        <td>2022-04-29/11:36</td>
+                        <td> ETHICS FOR TECHNOLOGISTS ( TCS3121 ) - ONLINE QUIZ 2 </td>
+                        <td><span class="badge bg-label-success me-1">Download</span></td>               
+                      </tr>
+  
+                      <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>08</strong></td>
+                        <td>2022-04-26/13:00</td>
+                        <td> EXAM MEDICAL CERTIFICATES APPROVAL STATUS   </td>
+                        <td><span class="badge bg-label-success me-1">Download</span></td>               
+                      </tr>
+  
+                      <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>09</strong></td>
+                        <td>2022-04-26/07:41</td>
+                        <td> CREATIVITY, INNOVATION AND ENTREPRENEURSHIP ( TCS4112 ) - CONTINUOUS ASSESSMENT 3 </td>
+                        <td><span class="badge bg-label-success me-1">Download</span></td>               
+                      </tr>
+  
+                      <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>10</strong></td>
+                        <td>2022-04-22/11:28</td>
+                        <td> NOTICE- L4 ET OPERATIONS MANAGEMENT TCS 4132</td>
+                        <td><span class="badge bg-label-success me-1">Download</span></td>               
+                      </tr>
+                   
+                    </tbody></table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+  
+  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+            <footer class="footer">
+              <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin templates</a> from Bootstrapdash.com</span>
+              </div>
+            </footer>
+            <!-- partial -->
+          </div>
+          <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+      </div>
+      <!-- container-scroller -->
+      <!-- plugins:js -->
+      <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
+      <!-- endinject -->
+      <!-- Plugin js for this page -->
+      <script src="../../assets/vendors/select2/select2.min.js"></script>
+      <script src="../../assets/vendors/typeahead.js/typeahead.bundle.min.js"></script>
+      <!-- End plugin js for this page -->
+      <!-- inject:js -->
+      <script src="../../assets/js/off-canvas.js"></script>
+      <script src="../../assets/js/hoverable-collapse.js"></script>
+      <script src="../../assets/js/misc.js"></script>
+      <script src="../../assets/js/settings.js"></script>
+      <script src="../../assets/js/todolist.js"></script>
+      <!-- endinject -->
+      <!-- Custom js for this page -->
+      <script src="../../assets/js/file-upload.js"></script>
+      <script src="../../assets/js/typeahead.js"></script>
+      <script src="../../assets/js/select2.js"></script>
+      <!-- End custom js for this page -->
+    </body>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © University of Ruhuna 2022</span>
+              
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/hoverable-collapse.js"></script>
+    <script src="assets/js/misc.js"></script>
+    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="assets/js/dashboard.js"></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>
